@@ -9,7 +9,7 @@
 #import "CustomCell.h"
 
 @implementation CustomCell
-@synthesize primarylabel,secondarylabel,check,checkbox;
+@synthesize primarylabel,secondarylabel,button;
 
 
 - (id)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier {
@@ -21,12 +21,12 @@
         secondarylabel = [[UILabel alloc]init];
         secondarylabel.textAlignment = UITextAlignmentLeft;
         secondarylabel.font = [UIFont systemFontOfSize:8];
-        check = [[UIImageView alloc]init];
-        checkbox=[[UIButton alloc]init];
+        //check = [[UIImageView alloc]init];
+        //checkbox=[[UIButton alloc]init];
         [self.contentView addSubview:primarylabel];
         [self.contentView addSubview:secondarylabel];
-        [self.contentView addSubview:check];
-        [self.contentView addSubview:checkbox];
+        //[self.contentView addSubview:check];
+        //[self.contentView addSubview:checkbox];
         
         
     }
@@ -41,11 +41,11 @@
     CGFloat boundsX = contentRect.origin.x;
     CGRect frame;
     
-    frame= CGRectMake(boundsX+300 ,0, 50, 50);
-    check.frame = frame;
+    //frame= CGRectMake(boundsX+300 ,0, 50, 50);
+    //check.frame = frame;
     
-    frame= CGRectMake(boundsX+100, 0, 50, 50);
-    checkbox.frame=frame;
+    //frame= CGRectMake(boundsX+100, 0, 50, 50);
+    //checkbox.frame=frame;
     
     frame= CGRectMake(boundsX+0 ,5, 200, 25);
     primarylabel.frame = frame;

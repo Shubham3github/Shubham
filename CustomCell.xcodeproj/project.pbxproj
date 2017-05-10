@@ -14,8 +14,8 @@
 		CED3FD971EC022C5009315DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED3FD961EC022C5009315DD /* Assets.xcassets */; };
 		CED3FD9A1EC022C5009315DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED3FD981EC022C5009315DD /* LaunchScreen.storyboard */; };
 		CED3FDA41EC02477009315DD /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CED3FDA31EC02477009315DD /* CustomCell.m */; };
-		CED3FDA91EC03118009315DD /* download (1).png in Resources */ = {isa = PBXBuildFile; fileRef = CED3FDA71EC03118009315DD /* download (1).png */; };
-		CED3FDAA1EC03118009315DD /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = CED3FDA81EC03118009315DD /* download.png */; };
+		CED3FDA91EC03118009315DD /* uncheck.png in Resources */ = {isa = PBXBuildFile; fileRef = CED3FDA71EC03118009315DD /* uncheck.png */; };
+		CED3FDAA1EC03118009315DD /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = CED3FDA81EC03118009315DD /* check.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +31,8 @@
 		CED3FD9B1EC022C5009315DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CED3FDA21EC02477009315DD /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		CED3FDA31EC02477009315DD /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
-		CED3FDA71EC03118009315DD /* download (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download (1).png"; sourceTree = "<group>"; };
-		CED3FDA81EC03118009315DD /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
+		CED3FDA71EC03118009315DD /* uncheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = uncheck.png; path = CustomCell/uncheck.png; sourceTree = "<group>"; };
+		CED3FDA81EC03118009315DD /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check.png; path = CustomCell/check.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,9 +49,10 @@
 		CED3FD7E1EC022C5009315DD = {
 			isa = PBXGroup;
 			children = (
+				CED3FDA71EC03118009315DD /* uncheck.png */,
+				CED3FDA81EC03118009315DD /* check.png */,
 				CED3FD891EC022C5009315DD /* CustomCell */,
 				CED3FD881EC022C5009315DD /* Products */,
-				CED3FDA61EC030D9009315DD /* Images */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,16 +88,6 @@
 				CED3FD8B1EC022C5009315DD /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CED3FDA61EC030D9009315DD /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				CED3FDA71EC03118009315DD /* download (1).png */,
-				CED3FDA81EC03118009315DD /* download.png */,
-			);
-			name = Images;
-			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED3FD9A1EC022C5009315DD /* LaunchScreen.storyboard in Resources */,
-				CED3FDAA1EC03118009315DD /* download.png in Resources */,
-				CED3FDA91EC03118009315DD /* download (1).png in Resources */,
+				CED3FDAA1EC03118009315DD /* check.png in Resources */,
+				CED3FDA91EC03118009315DD /* uncheck.png in Resources */,
 				CED3FD971EC022C5009315DD /* Assets.xcassets in Resources */,
 				CED3FD951EC022C5009315DD /* Main.storyboard in Resources */,
 			);

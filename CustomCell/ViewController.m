@@ -40,60 +40,45 @@
 // the cell will be returned to the tableView
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *CellIdentifier = @"Cell";
     CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[CustomCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier];
+        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     }
+    //------------------------------BUTTON---------------------------------------------------------
+    
+    
+    UIButton *button=[[UIButton alloc] initWithFrame:CGRectMake(300,0,50,50)];
+    [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [button setImage:[UIImage imageNamed:@"uncheck.png"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"check.png"] forState:UIControlStateSelected];
+    [cell addSubview:button];
+    [cell setIndentationWidth:45];
+    [cell setIndentationLevel:1];
+    
+    //-------------------------------TAP GESTURE---------------------------------------------------
+    
+    //UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
+    //[recognizer setNumberOfTapsRequired:1];
+    //button.userInteractionEnabled = YES;
+    //[button addGestureRecognizer:recognizer];
+    
+    //----------------------------------------------------------------------------------------------
     cell.primarylabel.text = @"Meeting on iPhone Development";
     cell.secondarylabel.text = @"Sat 10:30";
-    cell.check.image = [UIImage imageNamed:@"download.png"];
-    //cell.checkbox.userInteractionEnabled = YES;
-    [cell.checkbox addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
-    
-    // Set up the cell
-//    switch (indexPath.row) {
-//        case 0:
-//            cell.primarylabel.text = @"Meeting on iPhone Development";
-//            cell.secondarylabel.text = @"Sat 10:30";
-//            cell.check.image = [UIImage imageNamed:@"download.png"];
-//            cell.Button1.userInteractionEnabled = YES;
-//            break;
-//        case 1:
-//            cell.primarylabel.text = @"Call With Client";
-//            cell.secondarylabel.text = @"Planned";
-//            cell.check.image = [UIImage imageNamed:@"download.png"];
-//            cell.Button1.userInteractionEnabled = YES;
-//            break;
-//        case 2:
-//            cell.primarylabel.text = @"Appointment with Joey";
-//            cell.secondarylabel.text = @"2 Hours";
-//            cell.check.image = [UIImage imageNamed:@"download.png"];
-//            cell.Button1.userInteractionEnabled = YES;
-//             break;
-//        case 3:
-//            cell.primarylabel.text = @"Call With Client";
-//            cell.secondarylabel.text = @"Planned";
-//            cell.check.image = [UIImage imageNamed:@"download.png"];
-//            cell.Button1.userInteractionEnabled = YES;
-//              break;
-//        case 4:
-//            cell.primarylabel.text = @"Appointment with Joey";
-//            cell.secondarylabel.text = @"2 Hours";
-//            cell.check.image = [UIImage imageNamed:@"download.png"];
-//            cell.Button1.userInteractionEnabled = YES;
-//            break;
-//        default:
-//            break;
-//    }
-    
     return cell;
+}
+-(void)buttonPressed:(UIButton *)btn
+{
+    btn.selected=!btn.selected;
 }
 
 // when user tap the row, what action you want to perform
 - (void)tableView:(UITableView *)theTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"selected %d row", indexPath.row);
+    NSLog(@"selected %ld row", (long)indexPath.row);
 }
 
 

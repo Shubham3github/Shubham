@@ -12,12 +12,10 @@
 {
     UILabel *primarylabel;
     UILabel *secondarylabel;
-    UIImageView *check;
-    UIButton *checkbox;
+    UIButton *button;
 }
 
 @property (nonatomic, strong) UILabel  *primarylabel;
 @property (nonatomic, strong) UILabel  *secondarylabel;
-@property (nonatomic, strong) UIImageView *check;
-@property (nonatomic,strong)  UIButton *checkbox;
+@property (nonatomic,strong)  UIButton *button;
 @end
